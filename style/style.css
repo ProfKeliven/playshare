@@ -1,42 +1,192 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
+/*template*/
 
-main{
+body {
     background: linear-gradient(217deg, #0517BA, #0C121F 80.71%);
     width: 100vw;
-    height: 90vh;
 }
+
 
 /*login page*/
-#login{
+#login {
     display: flex;
     justify-content: center;
-}
-.container{
-    width: 300px;
-    background-color: rgba(217,217,217,.2);
-    border: solid 2px #007AFF;
-    padding: 100px 10px;
-    height: 200px;
-    gap: 40px;
-    border-radius: 0px 0px 200px 200px;
+    height: 100vh;
 }
 
-.container__content{
+#login .container {
+    width: 300px;
+    padding: 140px 10px 90px 10px;
+    height: 50vh;
+    gap: 40px;
+    border-radius: 0px 0px 120px 120px;
+}
+
+#login .container__content {
     color: #fff;
     gap: 30px;
 }
-.container__form{
+
+#login .logo{
+    width: 60%;
+}
+
+/*cadastro*/
+#sign-in-page{
+    background-color: rgba(217, 217, 217, .3) !important;
+    height: 100vh;
+}
+#sign-in-page .container{
+    color: white;
+}
+.container__description{
+    gap: 8px;
+    margin: 20px 0px;
+}
+#sign-in-page .logo{
+    width: 40%;
+}
+#sign-in-page .image{
+    width: 30vw;
+    height: 80vh;
+    object-fit: cover;
+}
+
+#sign-in-page .container__content {
+    padding: 80px 0px 0px 100px;
+    width: 50VW;
+}
+/*Formulario*/
+.container__form {
     gap: 10px;
 }
 
+.inline-center input{
+        width: 32vw;
+}
+#send{
+    padding: 8px 25px;
+    color: white;
+    border-radius: 50px;
+    border: solid 2px #007AFF;
+    background-color: #007AFF;
+    margin: 10px;
+
+}
+#send:hover{
+    background-color: #0517BA;
+    border: solid 2px #0517BA;
+    cursor: pointer;
+}
+
+#back{
+    padding: 8px 25px;
+    color: #007AFF;
+    border-radius: 50px;
+    border: solid 2px #007AFF;
+    background-color: #fff;
+    margin: 10px;
+
+}
+#back:hover{
+    border: solid 2px #0517BA;
+    cursor: pointer;
+}
+
+
+input {
+    width: 97%;
+    border-radius: 50px;
+    color: white;
+    padding: 10px 20px;
+}
+
+input::placeholder {
+    color: white;
+    font-weight: 100;
+    opacity: .5;
+}
+
+input:hover{
+    cursor: pointer;
+    background-color: rgba(217, 217, 217, .5);
+}
+.container__form a{
+    color: #fff;
+}
+
+.container__form a:hover{
+    cursor: pointer;
+    color: #007AFF;
+}
+
 /*utilitarios*/
-.center--column{
+.inline-center{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.center--column {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.b-blue {
+    background-color: rgba(217, 217, 217, .3);
+    border: solid 1px #007AFF;
+}
+
+.left__column{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+.inline__end{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+}
+
+.center__between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*home*/
+#home{
+    display: flex;
+    width: 100vw;
+}
+
+/*header*/
+.header{
+    padding: 20px 50px 20px 20px;
+}
+.header__content{
+    width: 30vw;
+}
+.header__nav{
+    width: 15vw;
+}
+
+
+/*navbar*/
+.navbar{
+    width: 15vw;
+    height: 100vh;
 }
