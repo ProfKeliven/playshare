@@ -63,10 +63,7 @@ body {
 /*Formulario*/
 .container__form {
     gap: 10px;
-}
-
-.inline-center input{
-        width: 32vw;
+    width: 600px;
 }
 #send{
     padding: 8px 25px;
@@ -99,7 +96,7 @@ body {
 
 
 input {
-    width: 97%;
+    width: 90%;
     border-radius: 50px;
     color: white;
     padding: 10px 20px;
@@ -126,7 +123,7 @@ input:hover{
 
 /*utilitarios*/
 .inline-center{
-    width: 100%;
+    width: 96%;
     display: flex;
     gap: 10px;
     align-items: center;
@@ -142,8 +139,11 @@ input:hover{
 
 .b-blue {
     background-color: rgba(217, 217, 217, .3);
+    background-size: cover;
+    background-repeat: no-repeat;
     border: solid 1px #007AFF;
 }
+
 
 .left__column{
     width: 100%;
@@ -173,20 +173,128 @@ input:hover{
     width: 100vw;
 }
 
+#home .container{
+    margin-left: 8.1%;
+}
+
 /*header*/
 .header{
-    padding: 20px 50px 20px 20px;
+    padding: 20px 25px;
+    width: 88vw;
+    border-radius: 0px 0px 0px 20px ;
 }
 .header__content{
     width: 30vw;
 }
 .header__nav{
-    width: 15vw;
+    width: 10vw;
 }
-
-
+/*sideba*/
+.sidebar{
+    width: 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    height: 100%;
+    height: 100vh;
+    position: fixed;
+}
+#profile-img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: aqua;
+}
 /*navbar*/
 .navbar{
-    width: 15vw;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 0;
+}
+
+/*sections*/
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.section__header{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section__content{
+    display: flex;
+    gap: 20px;
+}
+
+.recomendations{
+    width: 250px;
+    height: 250px;
+    background-image: url(../assets/country.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.recomendations__description{
+    background-color: rgba(255, 255, 255, .5);
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 0px 0px 15px 15px ;
+}
+
+.artist__img{
+    background-image: url(../assets/artist.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 160px;
+    height: 160px;
+}
+
+.artist{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.artist__name{
+    color: white;
+    text-align: center;
+}
+
+.playlist__img {
+    position: relative;
+    width: 200px; /* Ajuste o tamanho conforme necessário */
+    height: 200px; /* Ajuste o tamanho conforme necessário */
+    border-radius: 50%;
+    background-color: #3498db; /* Cor de fundo do círculo */
+    overflow: hidden;
+}
+
+.hole {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px; /* Ajuste o tamanho do furo */
+    height: 100px; /* Ajuste o tamanho do furo */
+    border-radius: 50%;
+    background-color: black; /* Cor do fundo que aparece no furo */
+    transform: translate(-50%, -50%);
 }

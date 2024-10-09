@@ -16,17 +16,18 @@
             <div class="container__content center--column">
                 <h3>Login</h3>
                 <form class="center--column container__form" action="">
-                    <input class="b-blue" type="text" placeholder="E-mail" id="email">
-                    <input class="b-blue" type="password" placeholder="Senha" id="password">
-                    <span style="color: red; display: none;">Usuário ou senha incirretos</span>
+                    <input class="b-blue" type="email" placeholder="E-mail" id="login-email">
+                    <input class="b-blue" type="password" placeholder="Senha" id="login-password">
+                    <span id="mensagem"></span>
                     <a href="" id="forget-password">Esqueci a senha</a>
-                    <button type="submit" id="send">Acessar</button>
+                    <button type="submit" id="send" onclick="login()">Acessar</button>
                     <strong><a href="./cadastro.html" id="sign-in">Não possuo cadastro</a></strong>
                 </form>
 
             </div>
         </div>
     </main>
+    <script src="./scripts/autenticacao.js"></script>
 </body>
 
 </html>

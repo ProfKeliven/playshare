@@ -19,23 +19,18 @@
                 </div>
 
                 <form class="left__column container__form" action="">
+                    <input class="b-blue" type="text" placeholder="Nome completo" id="name" required>
+
+                    <input class="b-blue" type="email" placeholder="E-mail" id="email" required>
+                    <input class="b-blue" type="email" placeholder="Confirmar e-mail" id="confirm-email" required>
                     <div class="inline-center">
-                        <input class="b-blue" type="text" placeholder="Nome" id="name">
-                        <input class="b-blue" type="text" placeholder="Sobrenome" id="lastname">
+                        <input class="b-blue" type="password" placeholder="Senha" id="password" required>
+                        <input class="b-blue" type="password" placeholder="Confirmar senha" id="confirm-password" required>
                     </div>
-                    <div class="inline-center">
-                        <input class="b-blue" type="text" placeholder="Nascimento (dd-mm-aaaa)" id="birthday">
-                        <input class="b-blue" type="text" placeholder="CPF" id="cpf">
-                    </div>
-                    <input class="b-blue" type="text" placeholder="E-mail" id="email">
-                    <input class="b-blue" type="text" placeholder="Confirmar e-mail" id="email">
-                    <div class="inline-center">
-                        <input class="b-blue" type="password" placeholder="Senha" id="password">
-                        <input class="b-blue" type="password" placeholder="Confirmar senha" id="password">
-                    </div>
+                    <span id="error"></span>
                     <div class="inline__end">
-                        <button id="back">Cancelar</button>
-                        <button type="submit" id="send">Acessar</button>
+                        <button id="back" onclick="backLogin()">Voltar</button>
+                        <button id="send" onclick="addUser()">Acessar</button>
                     </div>
 
                 </form>
@@ -44,8 +39,9 @@
                 <img class="image" src="./assets/img-cadastro.png" alt="">
             </div>
         </div>
-        
+
     </main>
+    <script src="./scripts/autenticacao.js"></script>
 </body>
 
 </html>
