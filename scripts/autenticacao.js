@@ -12,9 +12,11 @@ function addUser(){
     //validacao email e senha
     if(email !== confirmEmail){
         document.getElementById('error').innerText = 'Os emails são diferentes'
+        return
     }
     if(password !== confirmPassword){
         document.getElementById('error').innerText = 'As senhas são diferentes'
+        return
     }
 
     //verificacao se o email já está cadastrado
@@ -29,7 +31,7 @@ function addUser(){
         id: Date.now(),
         nome: name,
         email: email,
-        senha: btoa(password), //salvanso senha com criptografia
+        senha: btoa(password), //salvando senha com criptografia
         playlists: []
     }
 
@@ -40,7 +42,9 @@ function addUser(){
     localStorage.setItem('usuarios', JSON.stringify(usuarios))
     document.getElementById('error').innerText = 'Usuário cadastrado com sucesso'
     //depois que o usuário for cadastrado, o sistema redireciona para a pagina de login com uma espera 3 segundos
+    console.log("usuario cadastrado")
     setTimeout(() => {
+        console.log("redireciona para index.html")
         window.location.href = 'index.html'
     }, 3000)
 }
@@ -58,17 +62,25 @@ function login(){
     let usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
 
     //encontrando o usuario e a senha no localstorage
-    let usuario = usuarios.find(usuario => usuario.email === email && usuario.password === btoa(password))
+    let usuario = usuarios.find(usuario => usuario.email === email && usuario.senha === btoa(password))
 
     //verificando se usuario e senha estao corretos
     if(usuario){
         //armazenar que o usuario está logado 
         sessionStorage.setItem('usuarioLogado', JSON.stringify(usuario))
 
+        //verigicando se o sessionStorage foi atualizado 
+        console.log('sessionStorage atualizado:', sessionStorage.getItem('usuarioLogado'))
+
+
+        console.log("login efetuado")
         //redirecionar para página home
-        window.location.href = "./home.html"
+        window.location.href = "home.html"
     }else{
         document.getElementById('mensagem').innerText = 'usuário ou senha incorretos'
+        console.log("login com erro")
+        return
+        
     }
 
 }
