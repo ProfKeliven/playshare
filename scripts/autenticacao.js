@@ -62,7 +62,7 @@ function login(){
     let usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
 
     //encontrando o usuario e a senha no localstorage
-    let usuario = usuarios.find(usuario => usuario.email === email && usuario.senha === btoa(password))
+    let usuario = usuarios.find(usuario => usuario.email === email && atob(usuario.senha) === password)
 
     //verificando se usuario e senha estao corretos
     if(usuario){

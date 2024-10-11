@@ -17,8 +17,8 @@
                     <h3>Efetuar Cadastro</h3>
                     <p>Digite seus dados para se cadastrar na plataforma</p>
                 </div>
-
-                <form class="left__column container__form" action="">
+                    <!--colocamos como espera de evento no form e chamamos funcao addUser-->
+                <form class="left__column container__form" onsubmit="event.preventDefault(); addUser();">
                     <input class="b-blue" type="text" placeholder="Nome completo" id="name" required>
 
                     <input class="b-blue" type="email" placeholder="E-mail" id="email" required>
@@ -30,7 +30,8 @@
                     <span id="error"></span>
                     <div class="inline__end">
                         <button id="back" onclick="backLogin()">Voltar</button>
-                        <button id="send" onclick="addUser()">Acessar</button>
+                        <!--tiramos o evento onclick do botao acessar e colocamos um type: submit-->
+                        <button id="send" type="submit">Acessar</button>
                     </div>
 
                 </form>
